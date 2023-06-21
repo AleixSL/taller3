@@ -1,7 +1,46 @@
 <mat-toolbar>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
+  <div fxHide.gt-xs>
+    <button mat-icon-button (click)="onToggleSidenav()">
+        <mat-icon>menu</mat-icon>
+    </button>
+</div>
+<div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+    <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+        <li>
+            <a routerLink="/inici">Inici</a>
+        </li>
+        <li>
+            <a routerLink="/inici">El taller</a>
+        </li>
+        <li>
+          <a routerLink="/inici">El taller</a>
+        </li>
+        <li>
+          <a routerLink="/inici">El taller</a>
+        </li>
+        <li>
+          <a routerLink="/inici">El taller</a>
+        </li>
+        <li>
+          <a routerLink="/inici">El taller</a>
+        </li>
+        <li>
+          <a routerLink="/inici">El taller</a>
+        </li>
+    </ul>
+</div>
   <img src="/assets/taller3.jpg" style="float:left;width:42px;height:42px;margin-left:10px;">
 
 </mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav role="navigation">
+    <!--this is a place for us to add side-nav code-->
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <!--in here all the content must reside. We will add a navigation header as well-->
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

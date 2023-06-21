@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Taller Tres';
+
+  public onToggleSidenav = () => { 
+
+  }
 }
